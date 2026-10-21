@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="BERK: explora el universo de Cómo entrenar a tu dragón, descubre especies, conoce personajes y guarda tus dragones favoritos.">
+
+    <title>BERK | El mundo de los dragones</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO Y MENÚ -->
+
+    <header class="encabezado">
+
+        <a href="#inicio" class="logo">
+            BERK<span>.</span>
+        </a>
+
+        <button
+            class="boton-menu"
+            id="boton-menu"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="navegacion">
+
+            ☰
+
+        </button>
+
+        <nav class="navegacion" id="navegacion">
+
+            <a href="#inicio" class="enlace activo">Inicio</a>
+
+            <a href="#dragones" class="enlace">Dragones</a>
+
+            <a href="#legendarios" class="enlace">Legendarios</a>
+
+            <a href="#favoritos" class="enlace">Favoritos</a>
+
+            <a href="#explorar" class="enlace">Explorar Berk</a>
+
+            <a href="#entrenamiento" class="enlace">Entrenamiento</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PORTADA PRINCIPAL -->
+
+    <main>
+        <section class="portada portada-inmersiva" id="inicio">
+
+    <div class="portada-fondo"></div>
+    <div class="portada-capa"></div>
+
+    <div class="portada-contenido">
+
+        <p class="etiqueta">
+            UN MUNDO MÁS ALLÁ DE LO CONOCIDO
+        </p>
+
+        <h1>
+            Descubre el<br>
+            mundo de los<br>
+            <span>dragones</span>
+        </h1>
+
+        <p class="descripcion">
+            Explora especies extraordinarias, descubre sus habilidades
+            y adéntrate en el universo donde los dragones y los vikingos
+            comparten una historia.
+        </p>
+
+        <div class="portada-botones">
+            <a href="#dragones" class="boton boton-principal">
+                Explorar dragones
+            </a>
+
+            <a href="#explorar" class="boton boton-secundario">
+                Descubrir Berk
+            </a>
+        </div>
+
+        <div class="portada-informacion">
+
+            <div class="dato">
+                <strong>40+</strong>
+                <span>Dragones por descubrir</span>
+            </div>
+
+            <div class="dato">
+                <strong>3</strong>
+                <span>Películas animadas</span>
+            </div>
+
+            <div class="dato">
+                <strong>∞</strong>
+                <span>Aventuras por explorar</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="portada-indicador">
+        <span></span>
+        DESPLÁZATE PARA EXPLORAR
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     DRAGÓN DEL DÍA
+========================================= -->
+
+<section class="seccion dragon-del-dia" id="dragon-del-dia">
+
+    <div class="dragon-dia-encabezado">
+
+        <span class="dragon-dia-etiqueta">
+            🐉 DESCUBRIMIENTO DIARIO
+        </span>
+
+        <h2>El dragón del día</h2>
+
+        <p>
+            ¡Cada día hay un nuevo dragón por descubrir!
+            Conoce sus características, habilidades y secretos.
+        </p>
+
+    </div>
+
+    <div class="dragon-dia-tarjeta">
+
+        <div class="dragon-dia-imagen">
+
+            <span class="dragon-dia-sello">
+                DRAGÓN DESTACADO
+            </span>
+
+            <img
+                id="imagen-dragon-dia"
+                src=""
+                alt="Dragón del día"
+            >
+
+        </div>
+
+        <div class="dragon-dia-informacion">
+
+            <span
+                id="categoria-dragon-dia"
+                class="dragon-dia-categoria">
+                DRAGÓN DE BERK
+            </span>
+
+            <h3 id="nombre-dragon-dia">
+                Descubriendo dragón...
+            </h3>
+
+            <p id="descripcion-dragon-dia">
+                Prepárate para conocer al protagonista de hoy.
+            </p>
+
+            <div class="dragon-dia-detalles">
+
+                <div>
+                    <span>Tipo</span>
+                    <strong id="tipo-dragon-dia">
+                        Por descubrir
+                    </strong>
+                </div>
+
+                <div>
+                    <span>Habilidades</span>
+                    <strong id="habilidades-dragon-dia">
+                        Por descubrir
+                    </strong>
+                </div>
+
+            </div>
+
+            <p
+                id="curiosidad-dragon-dia"
+                class="dragon-dia-curiosidad">
+            </p>
+
+            <div class="dragon-dia-botones">
+
+                <button
+                    type="button"
+                    id="favorito-dragon-dia"
+                    class="dragon-dia-boton">
+                    Agregar a favoritos
+                </button>
+
+                <button
+                    type="button"
+                    id="otro-dragon-dia"
+                    class="dragon-dia-boton dragon-dia-boton-secundario">
+                    Descubrir otro dragón
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     EL MUNDO DE LOS DRAGONES
+========================================= -->
+
+<section
+    class="seccion seccion-dragones"
+    id="dragones">
+
+    <div class="seccion-encabezado">
+
+        <div>
+
+            <p class="etiqueta">
+                DESCUBRE SUS SECRETOS
+            </p>
+
+            <h2>El mundo de los dragones</h2>
+
+            <p class="texto-seccion">
+                Cada especie tiene una historia, habilidades
+                extraordinarias y características únicas.
+            </p>
+
+        </div>
+
+        <a href="#dragones" class="enlace-explorar">
+            Explorar colección →
+        </a>
+
+    </div>
+
+            <!-- BUSCADOR DE DRAGONES -->
+<div class="controles-catalogo">
+
+    <div class="buscador-dragones">
+        <span aria-hidden="true">⌕</span>
+
+        <input
+            type="search"
+            id="buscar-dragon"
+            placeholder="Buscar un dragón por su nombre..."
+            aria-label="Buscar dragones por nombre"
+        >
+    </div>
+
+    <div class="filtros-dragones" aria-label="Filtrar dragones">
+
+        <button class="filtro-dragon activo" data-filtro="todos">
+            Todos
+        </button>
+
+        <button class="filtro-dragon" data-filtro="peliculas">
+            Películas
+        </button>
+
+        <button class="filtro-dragon" data-filtro="series">
+            Series
+        </button>
+
+        <button class="filtro-dragon" data-filtro="legendarios">
+            Legendarios
+        </button>
+
+    </div>
+
+</div>
+
+<!-- CONTADOR DE RESULTADOS -->
+<div class="catalogo-informacion">
+    <p id="contador-dragones">Descubre nuestros dragones</p>
+    <span>EL ARCHIVO DE BERK</span>
+</div>
+
+<!-- AQUÍ APARECERÁN LAS TARJETAS -->
+<div
+    id="catalogo-destacado"
+    class="catalogo-destacado catalogo-interactivo"
+></div>
+
+<!-- MENSAJE CUANDO NO HAYA RESULTADOS -->
+<p id="sin-resultados" class="sin-resultados" hidden>
+    No encontramos dragones con ese nombre. Prueba otra búsqueda.
+</p>
+
+        </section>
+
+
+        <!-- FAVORITOS -->
+    <section class="seccion seccion-favoritos" id="favoritos">
+    <div class="seccion-encabezado">
+        <div>
+            <p class="etiqueta">TU PROPIA COLECCIÓN</p>
+            <h2>Dragones favoritos</h2>
+            <p class="texto-seccion">
+                Guarda los dragones que más te gusten y vuelve a encontrarlos cuando quieras.
+            </p>
+        </div>
+    </div>
+
+    <div id="catalogo-favoritos" class="catalogo-destacado">
+        <p class="mensaje-inicial">
+            Aquí aparecerán los dragones que guardes en tu colección de favoritos.
+        </p>
+    </div>
+</section>
+
+<!-- ========================================
+     EXPLORAR BERK
+========================================= -->
+
+<section class="explorar-berk" id="explorar-berk">
+    <div class="explorar-encabezado">
+        <span class="explorar-etiqueta">
+            🧭 DESCUBRE NUEVOS TERRITORIOS
+        </span>
+
+        <h2>Explora el mundo de <span>Berk</span></h2>
+
+        <p>
+            Descubre islas misteriosas, hogares de dragones
+            y lugares increíbles del mundo vikingo.
+            ¡Tu próxima aventura comienza aquí!
+        </p>
+    </div>
+
+    <div class="explorar-grid">
+
+        <!-- ISLA DE BERK -->
+        <article class="lugar-card">
+            <div class="lugar-imagen lugar-berk">
+
+    <img
+        src="Imagenes/berk.jpg"
+        alt="Paisaje de la Isla de Berk"
+        class="foto-lugar"
+    >
+
+    <span class="lugar-numero">01</span>
+
+    <span class="lugar-icono"></span>
+
+</div>
+
+            <div class="lugar-contenido">
+                <span class="lugar-tipo">HOGAR VIKINGO</span>
+
+                <h3>Isla de Berk</h3>
+
+                <p>
+                    Conoce la isla donde vikingos y dragones
+                    aprendieron a convivir.
+                </p>
+
+                <button
+                    class="btn-explorar"
+                    data-lugar="berk"
+                    type="button">
+                    Explorar lugar <span>→</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- ARENA DE ENTRENAMIENTO -->
+        <article class="lugar-card">
+            <div class="lugar-imagen lugar-arena">
+    <img
+        src="Imagenes/arena.jpg"
+        alt="Arena de entrenamiento de dragones"
+        class="foto-lugar"
+    >
+
+    <span class="lugar-numero">02</span>
+    <span class="lugar-icono"></span>
+</div>
+
+            <div class="lugar-contenido">
+                <span class="lugar-tipo">ENTRENAMIENTO</span>
+
+                <h3>Arena de Entrenamiento</h3>
+
+                <p>
+                    Descubre el lugar donde los vikingos
+                    aprenden a conocer a los dragones.
+                </p>
+
+                <button
+                    class="btn-explorar"
+                    data-lugar="arena"
+                    type="button">
+                    Explorar lugar <span>→</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- NIDO DE LOS DRAGONES -->
+        <article class="lugar-card">
+            <div class="lugar-imagen lugar-nido">
+    <img
+        src="Imagenes/nido.jpg"
+        alt="Nido de los dragones"
+        class="foto-lugar"
+    >
+
+    <span class="lugar-numero">03</span>
+    <span class="lugar-icono"></span>
+</div>
+
+            <div class="lugar-contenido">
+                <span class="lugar-tipo">TERRITORIO SALVAJE</span>
+
+                <h3>Nido de los Dragones</h3>
+
+                <p>
+                    Adéntrate en un territorio misterioso
+                    donde se reúnen numerosos dragones.
+                </p>
+
+                <button
+                    class="btn-explorar"
+                    data-lugar="nido"
+                    type="button">
+                    Explorar lugar <span>→</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- MUNDO OCULTO -->
+        <article class="lugar-card">
+            <div class="lugar-imagen lugar-oculto">
+
+    <img
+        src="Imagenes/mundo-oculto.jpg"
+        alt="Paisaje del Mundo Oculto"
+        class="foto-lugar"
+    >
+
+    <span class="lugar-numero">04</span>
+
+    <span class="lugar-icono"></span>
+
+</div>
+
+            <div class="lugar-contenido">
+                <span class="lugar-tipo">MUNDO SECRETO</span>
+
+                <h3>Mundo Oculto</h3>
+
+                <p>
+                    Explora un lugar extraordinario lleno
+                    de dragones y paisajes sorprendentes.
+                </p>
+
+                <button
+                    class="btn-explorar"
+                    data-lugar="oculto"
+                    type="button">
+                    Explorar lugar <span>→</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- ISLA DE LOS DEFENSORES DEL ALA -->
+        <article class="lugar-card">
+            <div class="lugar-imagen lugar-defensores">
+    <img
+        src="Imagenes/defensores.jpg"
+        alt="Isla de los Defensores del Ala"
+        class="foto-lugar"
+    >
+
+    <span class="lugar-numero">05</span>
+    <span class="lugar-icono"></span>
+</div>
+
+            <div class="lugar-contenido">
+                <span class="lugar-tipo">REFUGIO DE DRAGONES</span>
+
+                <h3>Isla de los Defensores del Ala</h3>
+
+                <p>
+                    Descubre una isla vinculada con la
+                    protección y el cuidado de los dragones.
+                </p>
+
+                <button
+                    class="btn-explorar"
+                    data-lugar="defensores"
+                    type="button">
+                    Explorar lugar <span>→</span>
+                </button>
+            </div>
+        </article>
+
+        <!-- BORDE DEL DRAGÓN -->
+        <article class="lugar-card">
+            <div class="lugar-imagen lugar-borde">
+    <img
+        src="Imagenes/borde.jpg"
+        alt="Base de aventuras del Borde del Dragón"
+        class="foto-lugar"
+    >
+
+    <span class="lugar-numero">06</span>
+    <span class="lugar-icono"></span>
+</div>
+
+            <div class="lugar-contenido">
+                <span class="lugar-tipo">BASE DE AVENTURAS</span>
+
+                <h3>Borde del Dragón</h3>
+
+                <p>
+                    Descubre la base desde donde los jinetes
+                    exploran territorios desconocidos.
+                </p>
+
+                <button
+                    class="btn-explorar"
+                    data-lugar="borde"
+                    type="button">
+                    Explorar lugar <span>→</span>
+                </button>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- VENTANA DE INFORMACIÓN -->
+    <div
+        class="modal-lugar"
+        id="modal-lugar"
+        aria-hidden="true">
+
+        <div
+            class="modal-lugar-contenido"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-lugar-titulo">
+
+            <button
+                class="cerrar-modal-lugar"
+                id="cerrar-modal-lugar"
+                type="button"
+                aria-label="Cerrar ventana">
+                &times;
+            </button>
+
+            <span id="modal-lugar-icono">🗺️</span>
+
+            <h3 id="modal-lugar-titulo">Descubre el lugar</h3>
+
+            <p id="modal-lugar-descripcion"></p>
+
+            <button
+                class="btn-cerrar-lugar"
+                id="btn-cerrar-lugar"
+                type="button">
+                Volver a explorar
+            </button>
+
+        </div>
+    </div>
+
+</section>
+
+<!-- ========================================
+     ENTRENAMIENTO DE DRAGONES
+========================================= -->
+
+<section class="seccion entrenamiento-berk" id="entrenamiento">
+
+    <div class="entrenamiento-encabezado">
+        <p class="etiqueta">CONVIÉRTETE EN UN JINETE</p>
+
+        <h2>Entrenamiento de dragones</h2>
+
+        <p>
+            Elige uno de los dragones de nuestro catálogo,
+            descubre sus características y demuestra cuánto sabes
+            sobre el fascinante mundo de Berk.
+        </p>
+    </div>
+
+    <div class="entrenamiento-panel">
+
+        <div class="entrenamiento-selector">
+
+            <label for="seleccionar-dragon">
+                🐉 Selecciona tu dragón
+            </label>
+
+            <select id="seleccionar-dragon">
+                <option value="">Elige un dragón del catálogo</option>
+            </select>
+
+            <div id="entrenamiento-dragon" class="entrenamiento-dragon">
+                <p>
+                    Selecciona un dragón para conocer sus características
+                    y comenzar tu entrenamiento.
+                </p>
+            </div>
+
+            <button
+                type="button"
+                id="comenzar-entrenamiento"
+                class="boton boton-principal"
+                disabled>
+                Comenzar entrenamiento
+            </button>
+
+        </div>
+
+        <div class="entrenamiento-prueba" id="entrenamiento-prueba">
+
+            <div class="entrenamiento-estadisticas">
+                <div>
+                    <span>Pregunta</span>
+                    <strong id="numero-pregunta">0/5</strong>
+                </div>
+
+                <div>
+                    <span>Puntos</span>
+                    <strong id="puntos-entrenamiento">0</strong>
+                </div>
+            </div>
+
+            <div class="entrenamiento-progreso">
+                <div id="barra-progreso"></div>
+            </div>
+
+            <div id="contenido-pregunta" aria-live="polite">
+                <h3>¿Estás listo para el desafío?</h3>
+
+                <p>
+                    Elige un dragón y pulsa «Comenzar entrenamiento»
+                    para poner a prueba tus conocimientos.
+                </p>
+            </div>
+
+            <div
+                id="resultado-entrenamiento"
+                class="resultado-entrenamiento"
+                aria-live="polite">
+            </div>
+
+            <button
+                type="button"
+                id="siguiente-pregunta"
+                class="boton boton-principal"
+                hidden>
+                Siguiente pregunta
+            </button>
+
+            <button
+                type="button"
+                id="reiniciar-entrenamiento"
+                class="boton boton-secundario"
+                hidden>
+                Volver a entrenar
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PIE DE PÁGINA -->
+
+    <footer class="pie-pagina">
+
+        <a href="#inicio" class="logo">
+            BERK<span>.</span>
+        </a>
+
+        <p>
+            Un universo de dragones por descubrir.
+        </p>
+
+        <p class="aviso">
+
+            Proyecto de fans sin afiliación oficial con DreamWorks.
+            Los personajes y sus marcas pertenecen a sus respectivos
+            titulares.
+
+        </p>
+
+        <p class="copyright">
+
+            © 2026 BERK · Proyecto educativo de desarrollo web.
+
+        </p>
+
+    </footer>
+    <!-- VENTANA DE INFORMACIÓN DEL DRAGÓN -->
+<div
+    id="modal-dragon"
+    class="modal-dragon"
+    aria-hidden="true"
+>
+    <div
+        class="modal-contenido"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-nombre"
+    >
+
+        <button
+            type="button"
+            id="cerrar-modal"
+            class="cerrar-modal"
+            aria-label="Cerrar información"
+        >
+            &times;
+        </button>
+        <div class="modal-arte" id="modal-arte">
+
+    <img
+        id="modal-imagen"
+        src=""
+        alt="Imagen del dragón"
+        hidden
+    >
+
+    <span id="modal-simbolo" aria-hidden="true">🐉</span>
+
+</div>
+
+        <div class="modal-informacion">
+
+            <p class="modal-etiqueta">ARCHIVO DE BERK</p>
+
+            <h2 id="modal-nombre">Nombre del dragón</h2>
+
+            <p id="modal-tipo" class="modal-tipo"></p>
+
+            <p id="modal-descripcion" class="modal-descripcion"></p>
+
+            <div class="modal-dato">
+                <h3>Habilidades</h3>
+                <p id="modal-habilidades"></p>
+            </div>
+
+            <div class="modal-dato">
+                <h3>Primera aparición</h3>
+                <p id="modal-aparicion"></p>
+        </div>
+
+            <button
+                type="button"
+                id="modal-favorito"
+                class="modal-boton-favorito"
+            >
+                ♡ Agregar a favoritos
+            </button>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>
